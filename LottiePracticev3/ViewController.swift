@@ -12,7 +12,7 @@ import Lottie
 class ViewController: UIViewController {
 
     @IBOutlet weak var animationContainer: UIView!
-    let starAnimationView = AnimationView()
+    let mailAnimationView = AnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,27 +24,27 @@ class ViewController: UIViewController {
             return
         }
         
-        starAnimationView.animation = Animation.filepath(myFile)
+        mailAnimationView.animation = Animation.filepath(myFile)
         
         //if this is true, there will be autolayout conflicts
-        starAnimationView.translatesAutoresizingMaskIntoConstraints = false
+        mailAnimationView.translatesAutoresizingMaskIntoConstraints = false
         
         //set the animation to loop
-        starAnimationView.loopMode = .loop
+        mailAnimationView.loopMode = .loop
         
         //add to animation into container
-        animationContainer.addSubview(starAnimationView)
+        animationContainer.addSubview(mailAnimationView)
         
         //Pin Animation(childView) to edges of container(parentView)
         NSLayoutConstraint.activate([
-            starAnimationView.leadingAnchor.constraint(equalTo: animationContainer.leadingAnchor),
-            starAnimationView.trailingAnchor.constraint(equalTo: animationContainer.trailingAnchor),
-            starAnimationView.topAnchor.constraint(equalTo: animationContainer.topAnchor),
-            starAnimationView.bottomAnchor.constraint(equalTo: animationContainer.bottomAnchor)
+            mailAnimationView.leadingAnchor.constraint(equalTo: animationContainer.leadingAnchor),
+            mailAnimationView.trailingAnchor.constraint(equalTo: animationContainer.trailingAnchor),
+            mailAnimationView.topAnchor.constraint(equalTo: animationContainer.topAnchor),
+            mailAnimationView.bottomAnchor.constraint(equalTo: animationContainer.bottomAnchor)
         ])
 
         
-        starAnimationView.play()
+        mailAnimationView.play()
     }
 
 
